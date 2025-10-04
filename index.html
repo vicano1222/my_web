@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>經典數位印刷</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Microsoft JhengHei", sans-serif;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    /* 頂端專線條 */
+    .top-bar {
+      background-color: #2d3e50;
+      color: #fff;
+      padding: 8px 16px;
+      font-size: 14px;
+      text-align: right;
+    }
+
+    /* LOGO 區域 */
+    header {
+      background-color: #4e76a0;
+      padding: 16px;
+      text-align: center;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .logo-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .logo-img {
+      height: 50px;
+    }
+
+    /* 主體布局 */
+    main {
+      flex: 1;
+      display: flex;
+      background-color: #fff;
+    }
+
+    /* 側邊導覽列 */
+    .sidebar {
+      width: 200px;
+      background-color: #f0f3f8;
+      border-right: 1px solid #ddd;
+      padding: 20px 10px;
+    }
+
+    .sidebar ul {
+      list-style: none;
+    }
+
+    .sidebar li {
+      padding: 10px;
+      margin: 5px 0;
+      color: #333;
+      cursor: pointer;
+      border-radius: 8px;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    .sidebar li:hover {
+      background-color: #007bff;
+      color: #fff;
+    }
+
+    /* 中央內容 */
+    .content {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 20px;
+
+      /* 背景圖片 */
+      background-image: url('https://www.jdprinting.com.tw/Ubmsys/UploadFiles/Service/2037_20240726154202_7859725.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr); /* 上4下4 */
+      gap: 20px;
+      width: 100%;
+      max-width: none;
+    }
+
+    .service-item {
+  background-color: rgba(245, 247, 250, 0.9);
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  text-align: center;
+  font-size: 20px;         
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;            
+  aspect-ratio: 4 / 3;      
+  transition: all 0.3s;
+
+  /* 新增文字自動換行與行高 */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  line-height: 1.4;
+}
+
+    .service-item i {
+      font-size: 48px;           /* 圖示放大 */
+      margin-bottom: 15px;
+      color: #007bff;
+    }
+
+    .service-item:hover {
+      background-color: #007bff;
+      color: #fff;
+      transform: translateY(-5px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .service-item:hover i {
+      color: #fff;
+    }
+
+    /* 響應式調整 */
+    @media (max-width: 1024px) {
+      .services {
+        grid-template-columns: repeat(2, 1fr); /* 兩列 */
+      }
+    }
+
+   @media (max-width: 600px) {
+  .service-item {
+    font-size: 18px;
+    line-height: 1.4;
+  }
+
+  .service-item i {
+    font-size: 36px;
+  }
+}
+  </style>
+</head>
+<body>
+
+  <!-- 電話專線 -->
+  <div class="top-bar">
+    北部專線：0809-093-666　桃園專線：03-422-2810　
+    中部專線：04-2251-3377　南部專線：07-537-3366
+  </div>
+
+  <!-- LOGO -->
+  <header>
+    <div class="logo-container">
+      <img src="https://www.jdprinting.com.tw/front/Content/images/logo-white.png" alt="經典數位印刷 Logo" class="logo-img">
+    </div>
+  </header>
+
+  <!-- 主體 -->
+  <main>
+    <!-- 側邊導覽列 -->
+    <aside class="sidebar">
+      <ul>
+        <li>關於經典</li>
+        <li>永續發展</li>
+        <li>活動公告</li>
+        <li>服務項目</li>
+        <li>門市據點</li>
+        <li>常見問題</li>
+        <li>印刷知識</li>
+        <li>線上訂單/估價</li>
+        <li>訂單查詢</li>
+      </ul>
+    </aside>
+
+    <!-- 中央主要內容 -->
+    <section class="content">
+      <div class="services">
+        <div class="service-item"><i class="fas fa-list"></i>全部商品</div>
+        <div class="service-item"><i class="fas fa-print"></i>數位印刷</div>
+        <div class="service-item"><i class="fas fa-briefcase"></i>商業辦公</div>
+        <a href="https://www.jdprinting.com.tw/front/Service/List?idx=3" class="service-item" target="_blank">
+        <i class="fas fa-school"></i>
+        校園社團
+        </a>
+        <div class="service-item"><i class="fas fa-calendar-alt"></i>活動展會</div>
+        <div class="service-item"><i class="fas fa-bullhorn"></i>廣告行銷</div>
+        <div class="service-item"><i class="fas fa-drafting-compass"></i>工程印刷</div>
+        <div class="service-item"><i class="fas fa-utensils"></i>餐飲</div>
+      </div>
+    </section>
+  </main>
+
+</body>
+</html>
